@@ -1,6 +1,6 @@
 # SkyNopy - Interview challange
 
-This project implements a Python-based API that acts as an intelligent proxy and registry for satellite TLE (Two-Line Element) data, as required in the Skynopy coding challenge.
+This project implements a Python-based API using FlaskApi that acts as an intelligent proxy and registry for satellite TLE (Two-Line Element) data, as required in the Skynopy coding challenge.
 
 **Requirements:** Python 3.10+, see `requirements.txt` for dependencies.
 

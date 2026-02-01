@@ -1,22 +1,19 @@
 from flask import Flask
 from infrastructure.repositories.tle_storage import TLEStorage
 from infrastructure.mocks.mock_tle_service import MockTLEService
+from infrastructure.service import CelesTrakTLEService
 from domain.services.tle_coordinator_service import TLECoordinatorService
 from presentation.routes import create_routes
 
 
 app = Flask(__name__)
 
-tle_service = MockTLEService()
-
-"""
-USE_MOCK = false
+USE_MOCK = False
 
 if USE_MOCK:
     tle_service = MockTLEService()
 else:
-    # use the service instead
-"""
+    tle_service = CelesTrakTLEService()
 
 storage = TLEStorage()
 
