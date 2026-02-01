@@ -1,0 +1,247 @@
+type: collection.insomnia.rest/5.0
+schema_version: "5.1"
+name: My first collection
+meta:
+  id: wrk_6a1f0a5019224f8290cca1a6b83a224e
+  created: 1769702699036
+  modified: 1769702699036
+  description: ""
+collection:
+  - url: http://localhost:5000/health
+    name: Health Check
+    meta:
+      id: req_0cf9205b2e4042849c9f29792824d467
+      created: 1769702699184
+      modified: 1769704036332
+      isPrivate: false
+      description: ""
+      sortKey: -1769703780714
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/12.3.0
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:5000/satellite_tle/54234
+    name: Första Sökningen
+    meta:
+      id: req_9e2a45d94afe4b40b481b002ee9b81c0
+      created: 1769702737316
+      modified: 1769946267535
+      isPrivate: false
+      description: ""
+      sortKey: -1769703780664
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/12.3.0
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:5000/satellite_tle/54234
+    name: Lägga till Client
+    meta:
+      id: req_8a0340a680f54a9bb6539c12a292fb2f
+      created: 1769702770843
+      modified: 1769849999764
+      isPrivate: false
+      description: ""
+      sortKey: -1769703780626.5
+    method: POST
+    body:
+      mimeType: application/json
+      text: >-
+        {
+          "line1": "1 54234U 22150A   26032.10000000  .00000111  00000+0  73396-4 0  9991",
+          "line2": "2 54234  98.7514 331.7897 0001035 189.7776 170.3380 14.19541318167098"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/12.3.0
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:5000/satellite_tle/54234
+    name: Andra Sökningen (Cache)
+    meta:
+      id: req_62060bcef4a04b9e9955dab4b98070a2
+      created: 1769704028522
+      modified: 1769704094432
+      isPrivate: false
+      description: ""
+      sortKey: -1769703780639
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/12.3.0
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:5000/satellite_tle/54234
+    name: old
+    meta:
+      id: req_842ca97da8f343e38034e79d96a95d6e
+      created: 1769704083037
+      modified: 1769849126242
+      isPrivate: false
+      description: ""
+      sortKey: -1769703780514.7812
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/12.3.0
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:5000/satellite_tle/54234/history
+    name: Get History
+    meta:
+      id: req_e7f050ac5ff24d8ca8a0bdab1df467f5
+      created: 1769704117403
+      modified: 1769704120519
+      isPrivate: false
+      description: ""
+      sortKey: -1769703780617.125
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/12.3.0
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:5000/satellite_tle/54234
+    name: Lägga till Client (Error)
+    meta:
+      id: req_f35b8774411e410b864114affc85b9f9
+      created: 1769704139473
+      modified: 1769704145944
+      isPrivate: false
+      description: ""
+      sortKey: -1769703780615.5625
+    method: POST
+    body:
+      mimeType: application/json
+      text: >-
+        {
+          "line1": "1 99999U 22150A   26025.23306172  .00000191  00000+0  11139-3 0  9995",
+          "line2": "2 54234  98.7509 326.0095 0000754 215.9195 144.1931 14.19539113266262"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/12.3.0
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:5000/satellite_tle/99999
+    name: Get Invalid id
+    meta:
+      id: req_ccc98d50d5c641f8811bceecf5949dd4
+      created: 1769704171811
+      modified: 1769704183456
+      isPrivate: false
+      description: ""
+      sortKey: -1769703780614.7812
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/12.3.0
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: https://celestrak.org/NORAD/elements/gp.php?CATNR=54234&
+    name: Celetrak
+    meta:
+      id: req_39ed6ed66e83407e974c29cabef744ea
+      created: 1769948877640
+      modified: 1769948903998
+      isPrivate: false
+      description: ""
+      sortKey: -1769948877640
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/12.3.0
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_c06647af69fe2d08a8e220fa2b37f08663c69133
+    created: 1769702699041
+    modified: 1769702699041
+environments:
+  name: Base Environment
+  meta:
+    id: env_c06647af69fe2d08a8e220fa2b37f08663c69133
+    created: 1769702699039
+    modified: 1769702699039
+    isPrivate: false
